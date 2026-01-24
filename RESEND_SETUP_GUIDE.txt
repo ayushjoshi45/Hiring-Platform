@@ -1,0 +1,211 @@
+========================================
+  RESEND EMAIL SETUP GUIDE - CareerHub
+========================================
+
+✅ Resend is now integrated! Much better than nodemailer!
+
+========================================
+STEP 1: Get Your Resend API Key
+========================================
+
+1. Go to: https://resend.com/signup
+2. Sign up for FREE account (no credit card needed!)
+3. After signup, go to: https://resend.com/api-keys
+4. Click "Create API Key"
+5. Give it a name (e.g., "CareerHub Dev")
+6. Copy the API key (starts with "re_...")
+
+⚠️ Important: Save the API key immediately - you won't see it again!
+
+========================================
+STEP 2: Add API Key to .env
+========================================
+
+Open your backend/.env file and add:
+
+RESEND_API_KEY=re_your_actual_api_key_here
+FRONTEND_URL=http://localhost:5173
+
+Example:
+RESEND_API_KEY=re_123abc456def789ghi
+FRONTEND_URL=http://localhost:5173
+
+========================================
+STEP 3: Restart Backend Server
+========================================
+
+Stop your backend server (Ctrl+C) and restart:
+
+cd backend
+npm start
+
+========================================
+FEATURES YOU GET WITH RESEND
+========================================
+
+✅ FREE TIER:
+   - 100 emails per day
+   - 3,000 emails per month
+   - Perfect for development!
+
+✅ BENEFITS:
+   - No SMTP configuration needed
+   - No "App Passwords" required
+   - Better deliverability
+   - Email analytics dashboard
+   - Beautiful email tracking
+   - No spam folder issues
+
+✅ EMAIL TEMPLATES INCLUDED:
+   1. Verification Email - When user signs up
+   2. Welcome Email - After email is verified
+
+========================================
+TEST THE EMAIL FLOW
+========================================
+
+1. Start backend: npm start (in backend folder)
+2. Start frontend: npm run dev (in frontend folder)
+3. Go to: http://localhost:5173/signup
+4. Fill the signup form
+5. Submit the form
+6. Check the email you used
+7. Click the verification link
+8. ✅ Done!
+
+========================================
+EMAIL TEMPLATES INFO
+========================================
+
+📧 VERIFICATION EMAIL:
+   - Subject: "Verify Your Email - CareerHub"
+   - Contains: Verification button + link
+   - Expires: 24 hours
+   - Design: Purple gradient matching your UI
+
+📧 WELCOME EMAIL:
+   - Subject: "Welcome to CareerHub!"
+   - Sent after: Email verification
+   - Contains: Next steps + CTA button
+   - Design: Professional and branded
+
+========================================
+PRODUCTION SETUP (OPTIONAL)
+========================================
+
+For production, you should verify your own domain:
+
+1. Go to Resend Dashboard > Domains
+2. Click "Add Domain"
+3. Enter your domain (e.g., careerhub.com)
+4. Add the DNS records shown
+5. Wait for verification
+6. Update sendEmail.js:
+   from: 'CareerHub <noreply@yourdomain.com>'
+
+Without verified domain, emails go from:
+from: 'CareerHub <onboarding@resend.dev>'
+
+This works fine for development!
+
+========================================
+TROUBLESHOOTING
+========================================
+
+❌ "API key not found"
+   → Make sure RESEND_API_KEY is in .env
+   → Restart backend server
+
+❌ "Email not received"
+   → Check spam folder
+   → Verify API key is correct
+   → Check Resend dashboard logs
+
+❌ "Invalid API key"
+   → Get new API key from Resend
+   → Make sure no spaces in .env
+
+========================================
+CHECKING RESEND DASHBOARD
+========================================
+
+Go to: https://resend.com/emails
+
+You can see:
+✅ All sent emails
+✅ Delivery status
+✅ Open rates (if enabled)
+✅ Click rates
+✅ Error logs
+
+========================================
+WHY RESEND > NODEMAILER
+========================================
+
+❌ Nodemailer:
+   - Complex SMTP setup
+   - Gmail blocks, restrictions
+   - App passwords required
+   - Often goes to spam
+   - No analytics
+
+✅ Resend:
+   - Simple API key setup
+   - Better deliverability
+   - Professional emails
+   - Analytics included
+   - Developer-friendly
+   - Modern & reliable
+
+========================================
+WHAT WAS CHANGED
+========================================
+
+✅ Files Updated:
+   1. backend/utils/sendEmail.js
+      - Now uses Resend API
+      - Simpler code
+      - Better error handling
+
+   2. backend/.env.example
+      - Updated with Resend config
+      - Removed nodemailer stuff
+
+   3. package.json
+      - Removed: nodemailer
+      - Added: resend
+
+✅ Same Features:
+   - Email verification still works
+   - Welcome email still works
+   - Beautiful HTML templates
+   - Auto-redirect after verification
+   - Everything else unchanged
+
+========================================
+QUICK START CHECKLIST
+========================================
+
+□ Sign up at resend.com
+□ Get API key
+□ Add to backend/.env file
+□ Restart backend server
+□ Test signup flow
+□ Check email received
+□ Click verification link
+□ Verify it works
+□ ✅ Done!
+
+========================================
+NEED HELP?
+========================================
+
+Resend Documentation: https://resend.com/docs
+Resend Support: https://resend.com/support
+
+========================================
+
+🎉 You're all set with Resend!
+Now you have professional email delivery for your CareerHub project!
+
+========================================
