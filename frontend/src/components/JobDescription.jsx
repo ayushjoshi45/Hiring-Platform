@@ -67,7 +67,7 @@ const JobDescription = () => {
     },[jobId,dispatch, user?._id]);
 
         return (
-        <div className='min-h-screen bg-gradient-to-b from-purple-50/30 to-white'>
+        <div className='min-h-screen bg-linear-to-b from-purple-50/30 to-white'>
             <Navbar />
             
             <div className='pt-24 pb-12'>
@@ -92,7 +92,7 @@ const JobDescription = () => {
                         className='bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100'
                     >
                         {/* Header Section */}
-                        <div className='bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 p-8 text-white'>
+                        <div className='bg-linear-to-r from-purple-600 via-pink-500 to-purple-600 p-8 text-white'>
                             <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-6'>
                                 <div className='flex items-start gap-4'>
                                     <div className='w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center p-3'>
@@ -180,7 +180,7 @@ const JobDescription = () => {
                             {/* Job Details Grid */}
                             <div className='grid md:grid-cols-2 gap-6'>
                                 {/* Role */}
-                                <div className='p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100'>
+                                <div className='p-6 rounded-2xl bg-linear-to-br from-blue-50 to-white border border-blue-100'>
                                     <div className='flex items-center gap-3 mb-2'>
                                         <div className='w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center'>
                                             <Briefcase className='w-5 h-5 text-blue-600' />
@@ -191,7 +191,7 @@ const JobDescription = () => {
                                 </div>
 
                                 {/* Location */}
-                                <div className='p-6 rounded-2xl bg-gradient-to-br from-green-50 to-white border border-green-100'>
+                                <div className='p-6 rounded-2xl bg-linear-to-br from-green-50 to-white border border-green-100'>
                                     <div className='flex items-center gap-3 mb-2'>
                                         <div className='w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center'>
                                             <MapPin className='w-5 h-5 text-green-600' />
@@ -202,7 +202,7 @@ const JobDescription = () => {
                                 </div>
 
                                 {/* Experience */}
-                                <div className='p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-white border border-purple-100'>
+                                <div className='p-6 rounded-2xl bg-linear-to-br from-purple-50 to-white border border-purple-100'>
                                     <div className='flex items-center gap-3 mb-2'>
                                         <div className='w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center'>
                                             <Calendar className='w-5 h-5 text-purple-600' />
@@ -213,7 +213,7 @@ const JobDescription = () => {
                                 </div>
 
                                 {/* Salary */}
-                                <div className='p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-white border border-orange-100'>
+                                <div className='p-6 rounded-2xl bg-linear-to-br from-orange-50 to-white border border-orange-100'>
                                     <div className='flex items-center gap-3 mb-2'>
                                         <div className='w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center'>
                                             <DollarSign className='w-5 h-5 text-orange-600' />
@@ -224,7 +224,7 @@ const JobDescription = () => {
                                 </div>
 
                                 {/* Posted Date */}
-                                <div className='p-6 rounded-2xl bg-gradient-to-br from-pink-50 to-white border border-pink-100'>
+                                <div className='p-6 rounded-2xl bg-linear-to-br from-pink-50 to-white border border-pink-100'>
                                     <div className='flex items-center gap-3 mb-2'>
                                         <div className='w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center'>
                                             <Clock className='w-5 h-5 text-pink-600' />
@@ -241,7 +241,7 @@ const JobDescription = () => {
                                 </div>
 
                                 {/* Total Applicants */}
-                                <div className='p-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-white border border-cyan-100'>
+                                <div className='p-6 rounded-2xl bg-linear-to-br from-cyan-50 to-white border border-cyan-100'>
                                     <div className='flex items-center gap-3 mb-2'>
                                         <div className='w-10 h-10 rounded-xl bg-cyan-100 flex items-center justify-center'>
                                             <Users className='w-5 h-5 text-cyan-600' />
@@ -258,7 +258,7 @@ const JobDescription = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3 }}
-                                    className='mt-8 p-6 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-200'
+                                    className='mt-8 p-6 rounded-2xl bg-linear-to-r from-purple-100 to-pink-100 border-2 border-purple-200'
                                 >
                                     <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
                                         <div>
@@ -279,7 +279,7 @@ const JobDescription = () => {
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className='mt-8 p-6 rounded-2xl bg-gradient-to-r from-green-100 to-emerald-100 border-2 border-green-200'
+                                    className='mt-8 p-6 rounded-2xl bg-linear-to-r from-green-100 to-emerald-100 border-2 border-green-200'
                                 >
                                     <div className='flex items-center gap-4'>
                                         <div className='w-12 h-12 rounded-full bg-green-500 flex items-center justify-center'>
